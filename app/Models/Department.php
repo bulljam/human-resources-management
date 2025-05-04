@@ -30,4 +30,6 @@ class Department extends Model
     {
         return $query->where('company_id', session('company_id'));
     }
+
+   
 }
