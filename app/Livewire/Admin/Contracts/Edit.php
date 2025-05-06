@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\Designation;
+namespace App\Livewire\Admin\Contracts;
 
 use Livewire\Component;
 
@@ -8,6 +8,6 @@ class Edit extends Component
 {
     public function render()
     {
-        return view('livewire.admin.designation.edit');
+        return view('livewire.admin.contracts.edit');
     }
 }
