@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Znck\Eloquent\Traits\BelongsToThrough;
 
 class Employee extends Model
 {
     use BelongsToThrough;
+    use HasFactory;
 
     protected $fillable = [
         'designation_id',
@@ -58,12 +60,18 @@ class Employee extends Model
         if (!$name) {
             return $query;
         }
-        return $query->whereRaw('name', 'like', '%' . strtolower($name) . '%');
+        return $query->where('name', 'like', '%' . $name . '%');
     }
 
-    public function getActiveContract($start_date = now(), $end_date = now())
+    public function getActiveContract($start_date = null, $end_date = null)
     {
-        return $this->contracts()->where('start_date', '<=', $start_date)->where('end_date', '>=', $end_date)->first();
+        $start_date = $start_date ?? now();
+        $end_date = $end_date ?? now();
+
+        return $this->contracts()
+            ->where('start_date', '<=', $start_date)
+            ->where('end_date', '>=', $end_date)
+            ->first();
     }
 
 }

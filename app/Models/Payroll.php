@@ -3,10 +3,12 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Payroll extends Model
 {
+    use HasFactory;
     protected $fillable = [
         'company_id',
         'year',
