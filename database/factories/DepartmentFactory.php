@@ -18,7 +18,6 @@ class DepartmentFactory extends Factory
     {
         return [
             'name' => $this->faker->randomElement(['Human Resources', 'IT Support', 'Accounting', 'Sales', 'Operations']),
-            'company_id' =>'', 
         ];
     }
 }

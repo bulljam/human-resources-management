@@ -17,8 +17,6 @@ class PayrollFactory extends Factory
     public function definition(): array
     {
         return [
-            'payroll_id' => '',
-            'employee_id' => '',
             'amount' => $this->faker->randomFloat(2, 1500, 6000),
             'payment_date' => $this->faker->dateTimeBetween('now', '+1 month'),
             'payment_method' => $this->faker->randomElement(['Bank Transfer', 'Cash', 'Check']),

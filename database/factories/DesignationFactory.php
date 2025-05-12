@@ -17,7 +17,6 @@ class DesignationFactory extends Factory
     public function definition(): array
     {
         return [
-            'department_id' => '',
             'name' => $this->faker->jobTitle(),
         ];
     }
