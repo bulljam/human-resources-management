@@ -9,7 +9,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth', 'verified'])->as('admin.')->group(function () {
     Route::get('/dashboard', Admin\Dashboard::class)->name('dashboard');
     // Companies
     Route::prefix('companies')->as('companies.')->group(function () {

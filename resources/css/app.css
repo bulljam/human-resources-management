@@ -23,6 +23,18 @@
     --color-zinc-900: #171717;
     --color-zinc-950: #0a0a0a;
 
+    --color-midnight-50:  #e6eaf2;
+    --color-midnight-100: #ccd5e5;
+    --color-midnight-200: #99aacb;
+    --color-midnight-300: #6680b1;
+    --color-midnight-400: #335597;
+    --color-midnight-500: #0c224d;
+    --color-midnight-600: #0a1d44;
+    --color-midnight-700: #08183b;
+    --color-midnight-800: #061232;
+    --color-midnight-900: #040d29;
+    --color-midnight-950: #020714;
+
     --color-accent: var(--color-neutral-800);
     --color-accent-content: var(--color-neutral-800);
     --color-accent-foreground: var(--color-white);
@@ -52,7 +64,7 @@
 }
 
 [data-flux-label] {
-    @apply  !mb-0 !leading-tight;
+    @apply !mb-0 !leading-tight;
 }
 
 input:focus[data-flux-control],
@@ -64,3 +76,15 @@ select:focus[data-flux-control] {
 /* \[:where(&)\]:size-4 {
     @apply size-4;
 } */
+
+.table {
+    @apply w-full;
+}
+
+.table th {
+    @apply px-6 py-3 text-xs font-medium text-midnight-800 dark:text-midnight-200 uppercase tracking-wider;
+}
+
+.table td {
+    @apply px-6 py-4 text-sm font-medium text-midnight-700 dark:text-midnight-100 whitespace-nowrap;
+}
