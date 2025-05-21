@@ -20,7 +20,7 @@ class Edit extends Component
     {
         $this->form->update();
 
-        return redirect()->route('admin.departments.index')->with('success', 'Department updated successfully.');
+        return redirect()->route('departments.index')->with('success', 'Department updated successfully.');
     }
     public function render()
     {

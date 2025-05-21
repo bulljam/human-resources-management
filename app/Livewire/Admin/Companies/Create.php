@@ -19,7 +19,7 @@ class Create extends Component
 
         $this->reset();
 
-        return redirect()->route('admin.companies.index')->with('success', 'Company created successfully.');
+        return redirect()->route('companies.index')->with('success', 'Company created successfully.');
     }
     public function render()
     {

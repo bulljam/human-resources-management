@@ -21,7 +21,7 @@ class Create extends Component
 
         $this->reset();
 
-        return redirect()->route('admin.departments.index')->with('success', 'Department created successfully.');
+        return redirect()->route('departments.index')->with('success', 'Department created successfully.');
 
     }
     public function render()

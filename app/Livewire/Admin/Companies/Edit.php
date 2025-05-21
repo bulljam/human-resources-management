@@ -24,7 +24,7 @@ class Edit extends Component
 
         $this->reset();
 
-        return redirect()->route('admin.companies.index')->with('success', 'Company updated successfully.');
+        return redirect()->route('companies.index')->with('success', 'Company updated successfully.');
     }
     public function render()
     {
